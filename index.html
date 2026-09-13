@@ -1,0 +1,1333 @@
+<!DOCTYPE html>
+<html lang="ko" class="scroll-smooth">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>남사떡집 | 용인 3대 전통 수제 떡 전문점</title>
+  <script src="https://cdn.tailwindcss.com"></script>
+  <script src="https://unpkg.com/lucide@latest"></script>
+  <link rel="preconnect" href="https://fonts.googleapis.com">
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+  <link href="https://fonts.googleapis.com/css2?family=Noto+Serif+KR:wght@300;400;600;700&family=Pretendard:wght@300;400;500;600;700&display=swap" rel="stylesheet">
+
+  <script>
+    tailwind.config = {
+      darkMode: 'class',
+      theme: {
+        extend: {
+          colors: {
+            rice: {
+              25: '#FCFCFB',
+              50: '#F9F9F8',
+              100: '#F3F2EE',
+              200: '#E7E5DF',
+              300: '#D5D1C7',
+              600: '#736F66',
+              800: '#33312C',
+              900: '#1C1B18',
+              950: '#11100E'
+            }
+          },
+          fontFamily: {
+            serif: ['"Noto Serif KR"', 'serif'],
+            sans: ['Pretendard', 'sans-serif']
+          }
+        }
+      }
+    }
+  </script>
+  <style>
+    body {
+      font-family: 'Pretendard', sans-serif;
+      transition: background-color 0.3s ease, color 0.3s ease;
+    }
+    .korean-title {
+      font-family: 'Noto Serif KR', serif;
+    }
+    .gallery-grid {
+      display: grid;
+      grid-template-columns: repeat(auto-fit, minmax(260px, 1fr));
+      gap: 1.25rem;
+    }
+    @media (min-width: 1024px) {
+      .gallery-masonry {
+        display: grid;
+        grid-template-columns: repeat(4, 1fr);
+        grid-auto-rows: 240px;
+        gap: 1.25rem;
+      }
+      .grid-span-2-row {
+        grid-row: span 2;
+      }
+      .grid-span-2-col {
+        grid-column: span 2;
+      }
+    }
+    /* Subtle theme gradient borders */
+    .gradient-border-card {
+      position: relative;
+      background-clip: padding-box;
+    }
+  </style>
+</head>
+<body class="antialiased selection:bg-stone-200 selection:text-stone-900 bg-white text-stone-800 dark:bg-stone-950 dark:text-stone-100">
+
+  <!-- Top Announcement Bar -->
+  <aside class="bg-stone-50 border-b border-stone-200 text-stone-600 text-xs py-2 px-4 dark:bg-stone-900/80 dark:border-stone-800 dark:text-stone-400">
+    <div class="max-w-7xl mx-auto flex items-center justify-between">
+      <div class="flex items-center space-x-2">
+        <span class="inline-flex items-center px-2 py-0.5 rounded text-[11px] font-semibold bg-gradient-to-r from-stone-100 to-stone-200 border border-stone-300 text-stone-800 dark:from-stone-800 dark:to-stone-700 dark:border-stone-600 dark:text-stone-200 shadow-sm">
+          당일 새벽 제조
+        </span>
+        <span class="font-normal text-stone-500 dark:text-stone-400 text-xs">용인 처인구 백옥쌀 100% • 첫 시루 오전 06:30</span>
+      </div>
+      <div class="hidden sm:flex items-center space-x-4 text-xs text-stone-600 dark:text-stone-400">
+        <span class="flex items-center gap-1.5"><i data-lucide="phone" class="w-3.5 h-3.5 text-stone-400"></i> 직통문의: 031-332-9080</span>
+        <span class="text-stone-300 dark:text-stone-700">|</span>
+        <span class="flex items-center gap-1.5"><i data-lucide="truck" class="w-3.5 h-3.5 text-stone-400"></i> 용인·수원·동탄 당일 퀵 & 전국 택배</span>
+      </div>
+    </div>
+  </aside>
+
+  <!-- Sticky Header with Theme Switcher -->
+  <header class="sticky top-0 z-40 bg-white/95 dark:bg-stone-950/95 backdrop-blur-md border-b border-stone-200/80 dark:border-stone-800/80 transition-colors duration-300">
+    <nav class="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8 h-20 flex items-center justify-between">
+      <!-- Logo -->
+      <a href="#hero" class="flex items-center gap-3 group">
+        <div class="w-11 h-11 rounded-xl bg-gradient-to-br from-stone-100 via-stone-200 to-stone-300 dark:from-stone-800 dark:via-stone-700 dark:to-stone-900 p-[1px] shadow-sm group-hover:scale-105 transition-all">
+          <div class="w-full h-full rounded-[11px] bg-white dark:bg-stone-900 flex items-center justify-center border border-stone-200 dark:border-stone-800">
+            <span class="korean-title font-semibold text-lg text-stone-900 dark:text-stone-100">南舍</span>
+          </div>
+        </div>
+        <div>
+          <div class="flex items-center gap-2">
+            <h1 class="text-xl sm:text-2xl font-bold tracking-tight text-stone-900 dark:text-white korean-title">남사떡집</h1>
+            <span class="text-[11px] font-medium text-stone-600 dark:text-stone-300 bg-stone-100 dark:bg-stone-800 px-2 py-0.5 rounded border border-stone-200 dark:border-stone-700">수제 떡명가</span>
+          </div>
+          <p class="text-[11px] text-stone-400 dark:text-stone-500 font-normal hidden sm:block">정직한 쌀로 매일 새벽 불을 지핍니다</p>
+        </div>
+      </a>
+
+      <!-- Desktop Nav Menu -->
+      <ul class="hidden md:flex items-center space-x-7 text-sm font-medium text-stone-600 dark:text-stone-300">
+        <li><a href="#story" class="hover:text-stone-950 dark:hover:text-white transition-colors flex items-center gap-1.5"><i data-lucide="feather" class="w-4 h-4 text-stone-400"></i>떡집 이야기</a></li>
+        <li><a href="#menu" class="hover:text-stone-950 dark:hover:text-white transition-colors flex items-center gap-1.5"><i data-lucide="cake" class="w-4 h-4 text-stone-400"></i>떡 차림표</a></li>
+        <li><a href="#gallery" class="hover:text-stone-950 dark:hover:text-white transition-colors flex items-center gap-1.5"><i data-lucide="image" class="w-4 h-4 text-stone-400"></i>빚는 풍경</a></li>
+        <li><a href="#estimate" class="hover:text-stone-950 dark:hover:text-white transition-colors flex items-center gap-1.5"><i data-lucide="calculator" class="w-4 h-4 text-stone-400"></i>간편 견적</a></li>
+        <li><a href="#location" class="hover:text-stone-950 dark:hover:text-white transition-colors flex items-center gap-1.5"><i data-lucide="map-pin" class="w-4 h-4 text-stone-400"></i>오시는 길</a></li>
+      </ul>
+
+      <!-- Action Area: Theme Toggle & Order Button -->
+      <div class="flex items-center gap-2.5 sm:gap-3">
+        <!-- Theme Toggle Button -->
+        <button id="themeToggleBtn" onclick="toggleTheme()" aria-label="화이트/다크 모드 전환" class="p-2.5 rounded-xl border border-stone-200 dark:border-stone-800 bg-stone-50 hover:bg-stone-100 dark:bg-stone-900 dark:hover:bg-stone-800 text-stone-700 dark:text-stone-300 transition-all shadow-xs flex items-center justify-center">
+          <i id="themeIconLight" data-lucide="sun" class="w-4 h-4 hidden"></i>
+          <i id="themeIconDark" data-lucide="moon" class="w-4 h-4"></i>
+        </button>
+
+        <a href="tel:031-332-9080" class="hidden sm:inline-flex items-center gap-2 px-4 py-2 rounded-xl bg-gradient-to-r from-stone-900 via-stone-800 to-stone-900 hover:from-stone-800 hover:to-stone-700 dark:from-stone-100 dark:via-stone-200 dark:to-stone-100 dark:text-stone-900 text-white text-xs font-semibold shadow-md active:scale-95 transition-all">
+          <i data-lucide="phone" class="w-3.5 h-3.5"></i>
+          <span>주문 상담</span>
+        </a>
+
+        <!-- Mobile Menu Trigger -->
+        <button id="mobileMenuBtn" aria-label="메뉴 열기" class="md:hidden p-2 rounded-xl text-stone-700 dark:text-stone-300 hover:bg-stone-100 dark:hover:bg-stone-900 transition">
+          <i data-lucide="menu" class="w-6 h-6"></i>
+        </button>
+      </div>
+    </nav>
+
+    <!-- Mobile Dropdown Navigation -->
+    <div id="mobileMenu" class="hidden md:hidden bg-white dark:bg-stone-950 border-b border-stone-200 dark:border-stone-800 px-6 py-4 space-y-3 shadow-lg">
+      <a href="#story" class="mobile-nav-link flex items-center gap-3 text-stone-700 dark:text-stone-300 font-medium py-2 border-b border-stone-100 dark:border-stone-900">
+        <i data-lucide="feather" class="w-4 h-4 text-stone-400"></i> 떡집 이야기
+      </a>
+      <a href="#menu" class="mobile-nav-link flex items-center gap-3 text-stone-700 dark:text-stone-300 font-medium py-2 border-b border-stone-100 dark:border-stone-900">
+        <i data-lucide="cake" class="w-4 h-4 text-stone-400"></i> 대표 떡 차림표
+      </a>
+      <a href="#gallery" class="mobile-nav-link flex items-center gap-3 text-stone-700 dark:text-stone-300 font-medium py-2 border-b border-stone-100 dark:border-stone-900">
+        <i data-lucide="image" class="w-4 h-4 text-stone-400"></i> 떡 갤러리 & 포장
+      </a>
+      <a href="#estimate" class="mobile-nav-link flex items-center gap-3 text-stone-700 dark:text-stone-300 font-medium py-2 border-b border-stone-100 dark:border-stone-900">
+        <i data-lucide="calculator" class="w-4 h-4 text-stone-400"></i> 답례떡·선물 간편 견적기
+      </a>
+      <a href="#location" class="mobile-nav-link flex items-center gap-3 text-stone-700 dark:text-stone-300 font-medium py-2 border-b border-stone-100 dark:border-stone-900">
+        <i data-lucide="map-pin" class="w-4 h-4 text-stone-400"></i> 매장 위치 안내
+      </a>
+      <div class="pt-2 flex flex-col gap-2">
+        <a href="tel:031-332-9080" class="w-full text-center py-2.5 rounded-xl bg-gradient-to-r from-stone-900 to-stone-800 dark:from-stone-100 dark:to-stone-200 dark:text-stone-900 text-white text-xs font-semibold shadow-sm flex items-center justify-center gap-2">
+          <i data-lucide="phone-outgoing" class="w-4 h-4"></i> 전화로 즉시 주문하기
+        </a>
+      </div>
+    </div>
+  </header>
+
+  <!-- Hero Section with Clean Modern Gradients -->
+  <section id="hero" class="relative overflow-hidden pt-8 pb-16 md:py-20 bg-gradient-to-b from-stone-50 via-white to-white dark:from-stone-900/40 dark:via-stone-950 dark:to-stone-950">
+    <div class="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8 relative">
+      <div class="grid grid-cols-1 lg:grid-cols-12 gap-10 lg:gap-14 items-center">
+        <!-- Left Content -->
+        <div class="lg:col-span-7 space-y-6 text-center lg:text-left">
+          <div class="inline-flex items-center gap-2 px-3 py-1 rounded-full bg-white dark:bg-stone-900 border border-stone-200 dark:border-stone-800 text-stone-600 dark:text-stone-300 text-xs shadow-xs">
+            <span class="w-1.5 h-1.5 rounded-full bg-stone-400 dark:bg-stone-500"></span>
+            <span>용인 처인구 남사읍 • 백옥쌀 100% 단일품종</span>
+          </div>
+
+          <h2 class="korean-title text-3xl sm:text-4xl md:text-5xl font-bold text-stone-900 dark:text-white leading-[1.28] tracking-tight">
+            새벽 증기에 깃든 순수함,<br class="hidden sm:inline">
+            <span class="bg-gradient-to-r from-stone-600 to-stone-400 dark:from-stone-300 dark:to-stone-500 bg-clip-text text-transparent">맑고 단정한 떡을 빚습니다</span>
+          </h2>
+
+          <p class="text-stone-500 dark:text-stone-400 text-sm sm:text-base font-normal leading-relaxed max-w-2xl mx-auto lg:mx-0">
+            합성 보존료나 인공 감미료 없이, 오직 <strong class="text-stone-800 dark:text-stone-200 font-semibold">용인 백옥쌀</strong>과 맑은 물, 소금 한 줌의 기본으로 매일 아침 정직하게 쪄냅니다. 소중한 날 전하는 답례떡부터 든든한 식사 대용 떡까지 정갈하게 올립니다.
+          </p>
+
+          <!-- Badges -->
+          <div class="flex flex-wrap justify-center lg:justify-start gap-2 pt-1">
+            <span class="inline-flex items-center gap-1.5 px-3 py-1.5 rounded-lg bg-white dark:bg-stone-900 border border-stone-200 dark:border-stone-800 text-xs text-stone-600 dark:text-stone-300 shadow-xs">
+              <i data-lucide="check" class="w-3.5 h-3.5 text-stone-500 dark:text-stone-400"></i> 무방부제 · 무착색료
+            </span>
+            <span class="inline-flex items-center gap-1.5 px-3 py-1.5 rounded-lg bg-white dark:bg-stone-900 border border-stone-200 dark:border-stone-800 text-xs text-stone-600 dark:text-stone-300 shadow-xs">
+              <i data-lucide="check" class="w-3.5 h-3.5 text-stone-500 dark:text-stone-400"></i> 용인 백옥쌀 햅쌀
+            </span>
+            <span class="inline-flex items-center gap-1.5 px-3 py-1.5 rounded-lg bg-white dark:bg-stone-900 border border-stone-200 dark:border-stone-800 text-xs text-stone-600 dark:text-stone-300 shadow-xs">
+              <i data-lucide="check" class="w-3.5 h-3.5 text-stone-500 dark:text-stone-400"></i> 정갈한 보자기 맞춤포장
+            </span>
+          </div>
+
+          <!-- Buttons with Gentle Gradients -->
+          <div class="flex flex-col sm:flex-row items-center justify-center lg:justify-start gap-3 pt-3">
+            <a href="#estimate" class="w-full sm:w-auto inline-flex items-center justify-center gap-2 px-6 py-3.5 rounded-xl bg-gradient-to-r from-stone-900 via-stone-800 to-stone-900 dark:from-stone-100 dark:via-stone-200 dark:to-stone-100 text-white dark:text-stone-900 font-semibold text-sm shadow-md hover:brightness-110 active:scale-[0.98] transition-all">
+              <i data-lucide="calculator" class="w-4 h-4"></i>
+              <span>답례떡 · 맞춤견적 계산</span>
+            </a>
+            <a href="#menu" class="w-full sm:w-auto inline-flex items-center justify-center gap-2 px-5 py-3.5 rounded-xl bg-white dark:bg-stone-900 border border-stone-300 dark:border-stone-700 text-stone-700 dark:text-stone-200 font-medium text-sm hover:bg-stone-50 dark:hover:bg-stone-800 active:scale-[0.98] transition-all shadow-xs">
+              <i data-lucide="book-open" class="w-4 h-4 text-stone-400"></i>
+              <span>정성 차림표 보기</span>
+            </a>
+          </div>
+
+          <!-- Subtle Stats -->
+          <div class="grid grid-cols-3 gap-4 pt-6 border-t border-stone-200 dark:border-stone-800/80">
+            <div class="text-center lg:text-left">
+              <p class="text-xl sm:text-2xl font-bold text-stone-900 dark:text-white korean-title">1984<span class="text-xs font-normal text-stone-400 ml-0.5">년~</span></p>
+              <p class="text-[11px] text-stone-400 mt-0.5">3대째 이어온 손맛</p>
+            </div>
+            <div class="text-center lg:text-left">
+              <p class="text-xl sm:text-2xl font-bold text-stone-900 dark:text-white korean-title">100<span class="text-xs font-normal text-stone-400 ml-0.5">%</span></p>
+              <p class="text-[11px] text-stone-400 mt-0.5">용인 백옥쌀 계약재배</p>
+            </div>
+            <div class="text-center lg:text-left">
+              <p class="text-xl sm:text-2xl font-bold text-stone-900 dark:text-white korean-title">당일 생산</p>
+              <p class="text-[11px] text-stone-400 mt-0.5">새벽 3시 시루 점화</p>
+            </div>
+          </div>
+        </div>
+
+        <!-- Right Hero Visual -->
+        <div class="lg:col-span-5">
+          <div class="relative mx-auto max-w-md lg:max-w-none">
+            <div class="rounded-2xl overflow-hidden bg-white dark:bg-stone-900 border border-stone-200/90 dark:border-stone-800 shadow-md p-3">
+              <div class="relative h-72 sm:h-96 w-full rounded-xl overflow-hidden bg-stone-50 dark:bg-stone-800 group">
+                <img 
+                  src="https://images.unsplash.com/photo-1578985545062-69928b1d9587?auto=format&fit=crop&w=1000&q=80" 
+                  alt="하얀 백자에 정갈하게 올린 순백 설기와 수제 떡" 
+                  class="w-full h-full object-cover object-center brightness-105 group-hover:scale-105 transition duration-700"
+                  onerror="this.src='https://placehold.co/800x600/FAFAFA/333333?text=남사떡집+순백설기'"
+                >
+                <div class="absolute inset-0 bg-gradient-to-t from-black/60 via-transparent to-transparent"></div>
+                <div class="absolute bottom-4 left-4 right-4 text-white">
+                  <span class="inline-block px-2 py-0.5 rounded bg-white/20 backdrop-blur-md text-[10px] tracking-wider uppercase mb-1 font-medium">
+                    Signature Rice Cake
+                  </span>
+                  <h3 class="text-base sm:text-lg font-semibold korean-title">순수 백옥쌀 백설기 & 4색 답례세트</h3>
+                  <p class="text-xs text-stone-200 mt-0.5">불필요한 장식을 덜어내고 쌀 본연의 촉촉한 결을 살렸습니다.</p>
+                </div>
+              </div>
+
+              <!-- Mini Bar -->
+              <div class="p-3 bg-white dark:bg-stone-900 flex items-center justify-between text-xs text-stone-600 dark:text-stone-400 mt-1">
+                <div class="flex items-center gap-2">
+                  <span class="w-2 h-2 rounded-full bg-emerald-500 animate-pulse"></span>
+                  <span class="text-xs">오늘 빚은 떡 매장 진열 중</span>
+                </div>
+                <span class="text-xs font-medium text-stone-700 dark:text-stone-300">남사읍 남사로 88</span>
+              </div>
+            </div>
+          </div>
+        </div>
+      </div>
+    </div>
+  </section>
+
+  <!-- Philosophy / Pillars: CSS Grid 3 Columns -->
+  <section id="story" class="py-16 bg-white dark:bg-stone-950 border-y border-stone-200/70 dark:border-stone-800">
+    <div class="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
+      <div class="text-center max-w-2xl mx-auto space-y-3 mb-12">
+        <span class="text-stone-500 dark:text-stone-400 text-xs font-semibold uppercase tracking-widest bg-stone-100 dark:bg-stone-900 px-3 py-1 rounded-full border border-stone-200 dark:border-stone-800">
+          Philosophy
+        </span>
+        <h2 class="korean-title text-2xl sm:text-3xl font-bold text-stone-900 dark:text-white">
+          "화려한 꾸밈보다 정직한 쌀 한 톨의 맛"
+        </h2>
+        <p class="text-stone-500 dark:text-stone-400 text-xs sm:text-sm leading-relaxed">
+          용인의 맑은 들녘에서 거둔 백옥쌀을 바탕으로, 3대째 변함없이 지켜온 남사떡집의 3가지 원칙입니다.
+        </p>
+      </div>
+
+      <!-- 3 Pillars Grid -->
+      <div class="grid grid-cols-1 md:grid-cols-3 gap-6">
+        <div class="p-6 rounded-2xl bg-white dark:bg-stone-900/60 border border-stone-200 dark:border-stone-800 hover:border-stone-300 dark:hover:border-stone-700 shadow-xs hover:shadow-md transition-all">
+          <div class="w-11 h-11 rounded-xl bg-stone-100 dark:bg-stone-800 text-stone-700 dark:text-stone-300 flex items-center justify-center mb-4">
+            <i data-lucide="wheat" class="w-5 h-5"></i>
+          </div>
+          <span class="text-[11px] font-semibold text-stone-400 uppercase">원칙 01</span>
+          <h3 class="text-base font-bold text-stone-900 dark:text-white mt-1 mb-2 korean-title">용인 백옥쌀 100% 단일품종</h3>
+          <p class="text-stone-500 dark:text-stone-400 text-xs leading-relaxed">
+            수입쌀이나 오래된 묵은쌀을 결코 섞지 않습니다. 처인구 농가 햅쌀만을 고집하여 씹을수록 달큰하고 부드러운 순수한 찰기를 선사합니다.
+          </p>
+        </div>
+
+        <div class="p-6 rounded-2xl bg-white dark:bg-stone-900/60 border border-stone-200 dark:border-stone-800 hover:border-stone-300 dark:hover:border-stone-700 shadow-xs hover:shadow-md transition-all">
+          <div class="w-11 h-11 rounded-xl bg-stone-100 dark:bg-stone-800 text-stone-700 dark:text-stone-300 flex items-center justify-center mb-4">
+            <i data-lucide="sun" class="w-5 h-5"></i>
+          </div>
+          <span class="text-[11px] font-semibold text-stone-400 uppercase">원칙 02</span>
+          <h3 class="text-base font-bold text-stone-900 dark:text-white mt-1 mb-2 korean-title">매일 아침 당일 생산 원칙</h3>
+          <p class="text-stone-500 dark:text-stone-400 text-xs leading-relaxed">
+            전날 남은 떡은 판매하지 않습니다. 매일 새벽 정성껏 가마솥 찜기 김을 올리고, 가장 맛있는 뜸 시간을 지켜 따스하게 전달합니다.
+          </p>
+        </div>
+
+        <div class="p-6 rounded-2xl bg-white dark:bg-stone-900/60 border border-stone-200 dark:border-stone-800 hover:border-stone-300 dark:hover:border-stone-700 shadow-xs hover:shadow-md transition-all">
+          <div class="w-11 h-11 rounded-xl bg-stone-100 dark:bg-stone-800 text-stone-700 dark:text-stone-300 flex items-center justify-center mb-4">
+            <i data-lucide="shield-check" class="w-5 h-5"></i>
+          </div>
+          <span class="text-[11px] font-semibold text-stone-400 uppercase">원칙 03</span>
+          <h3 class="text-base font-bold text-stone-900 dark:text-white mt-1 mb-2 korean-title">순수 천연 원료와 저당 앙금</h3>
+          <p class="text-stone-500 dark:text-stone-400 text-xs leading-relaxed">
+            인공 색소와 연화제를 넣지 않습니다. 직접 삶은 국산 팥, 거문도 생쑥, 공주 밤과 대추로 달지 않고 담백하게 빚어 속이 편안합니다.
+          </p>
+        </div>
+      </div>
+    </div>
+  </section>
+
+  <!-- Menu Section: Responsive CSS Grid -->
+  <section id="menu" class="py-16 bg-stone-50/70 dark:bg-stone-900/30">
+    <div class="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
+      <div class="flex flex-col md:flex-row md:items-end justify-between mb-10 gap-5">
+        <div>
+          <span class="text-stone-400 dark:text-stone-500 text-xs font-semibold uppercase tracking-widest">
+            Menu List
+          </span>
+          <h2 class="korean-title text-2xl sm:text-3xl font-bold text-stone-900 dark:text-white mt-1">
+            남사떡집 정성 차림표
+          </h2>
+          <p class="text-stone-500 dark:text-stone-400 text-xs mt-1">
+            소중한 분께 드리는 답례떡부터 가족을 위한 건강 찰떡까지 정갈하게 준비했습니다.
+          </p>
+        </div>
+
+        <!-- Filter Tabs -->
+        <div class="flex items-center gap-1.5 overflow-x-auto pb-1 scrollbar-none">
+          <button onclick="filterMenu('all', event)" class="filter-tab active-tab px-3.5 py-1.5 rounded-lg text-xs font-medium transition-all bg-stone-900 text-white dark:bg-stone-100 dark:text-stone-900 shadow-sm">
+            전체
+          </button>
+          <button onclick="filterMenu('gift', event)" class="filter-tab px-3.5 py-1.5 rounded-lg text-xs font-medium transition-all bg-white dark:bg-stone-900 text-stone-600 dark:text-stone-400 border border-stone-200 dark:border-stone-800 hover:bg-stone-100 dark:hover:bg-stone-800">
+            답례·백일·돌
+          </button>
+          <button onclick="filterMenu('traditional', event)" class="filter-tab px-3.5 py-1.5 rounded-lg text-xs font-medium transition-all bg-white dark:bg-stone-900 text-stone-600 dark:text-stone-400 border border-stone-200 dark:border-stone-800 hover:bg-stone-100 dark:hover:bg-stone-800">
+            전통 시루·설기
+          </button>
+          <button onclick="filterMenu('fusion', event)" class="filter-tab px-3.5 py-1.5 rounded-lg text-xs font-medium transition-all bg-white dark:bg-stone-900 text-stone-600 dark:text-stone-400 border border-stone-200 dark:border-stone-800 hover:bg-stone-100 dark:hover:bg-stone-800">
+            영양찰떡·찹쌀떡
+          </button>
+          <button onclick="filterMenu('holiday', event)" class="filter-tab px-3.5 py-1.5 rounded-lg text-xs font-medium transition-all bg-white dark:bg-stone-900 text-stone-600 dark:text-stone-400 border border-stone-200 dark:border-stone-800 hover:bg-stone-100 dark:hover:bg-stone-800">
+            예단·선물세트
+          </button>
+        </div>
+      </div>
+
+      <!-- Menu Grid: CSS Grid with Responsive columns -->
+      <div id="menuGrid" class="grid grid-cols-1 sm:grid-cols-2 lg:grid-cols-3 xl:grid-cols-4 gap-5">
+        
+        <!-- Product 1 -->
+        <div class="menu-item gift bg-white dark:bg-stone-900 rounded-xl overflow-hidden border border-stone-200 dark:border-stone-800 hover:border-stone-400 dark:hover:border-stone-700 shadow-xs hover:shadow-md transition-all group flex flex-col justify-between">
+          <div>
+            <div class="relative h-48 bg-stone-50 dark:bg-stone-800 overflow-hidden">
+              <img 
+                src="https://images.unsplash.com/photo-1578985545062-69928b1d9587?auto=format&fit=crop&w=600&q=80" 
+                alt="수제 답례떡 2구 세트"
+                class="w-full h-full object-cover brightness-105 group-hover:scale-105 transition duration-500"
+                onerror="this.src='https://placehold.co/600x400/FAFAFA/333333?text=답례떡+2구'"
+              >
+              <div class="absolute top-2.5 left-2.5">
+                <span class="px-2 py-0.5 rounded text-[10px] font-medium bg-white/95 dark:bg-stone-900/90 text-stone-700 dark:text-stone-300 border border-stone-200 dark:border-stone-700 shadow-sm">
+                  베스트 답례
+                </span>
+              </div>
+            </div>
+            <div class="p-4">
+              <div class="flex items-center justify-between text-[11px] text-stone-400 dark:text-stone-500">
+                <span>백일 · 돌 · 결혼 · 조문</span>
+                <span>개별 상자</span>
+              </div>
+              <h3 class="text-base font-semibold text-stone-900 dark:text-white mt-1 korean-title">남사 수제 답례떡 2구 세트</h3>
+              <p class="text-stone-500 dark:text-stone-400 text-xs mt-1 line-clamp-2">
+                포슬포슬하고 촉촉한 순백 꿀설기와 3색 경단(또는 찰떡)으로 단정하게 구성한 스테디셀러입니다.
+              </p>
+            </div>
+          </div>
+          <div class="px-4 pb-4 pt-2 border-t border-stone-100 dark:border-stone-800 flex items-center justify-between">
+            <div>
+              <span class="text-[11px] text-stone-400 dark:text-stone-500">세트당</span>
+              <p class="text-base font-bold text-stone-900 dark:text-white">3,500<span class="text-xs font-normal text-stone-500 ml-0.5">원</span></p>
+            </div>
+            <button onclick="quickOrder('남사 수제 답례떡 2구 세트', 3500)" class="px-3 py-1.5 rounded-lg bg-gradient-to-r from-stone-900 to-stone-800 dark:from-stone-100 dark:to-stone-200 text-white dark:text-stone-900 text-xs font-semibold hover:brightness-110 active:scale-95 transition flex items-center gap-1 shadow-xs">
+              <i data-lucide="plus" class="w-3.5 h-3.5"></i> 견적 담기
+            </button>
+          </div>
+        </div>
+
+        <!-- Product 2 -->
+        <div class="menu-item traditional bg-white dark:bg-stone-900 rounded-xl overflow-hidden border border-stone-200 dark:border-stone-800 hover:border-stone-400 dark:hover:border-stone-700 shadow-xs hover:shadow-md transition-all group flex flex-col justify-between">
+          <div>
+            <div class="relative h-48 bg-stone-50 dark:bg-stone-800 overflow-hidden">
+              <img 
+                src="https://images.unsplash.com/photo-1590080875515-8a3a8dc5735e?auto=format&fit=crop&w=600&q=80" 
+                alt="백옥쌀 순백설기"
+                class="w-full h-full object-cover brightness-105 group-hover:scale-105 transition duration-500"
+                onerror="this.src='https://placehold.co/600x400/FAFAFA/333333?text=백옥쌀+백설기'"
+              >
+              <div class="absolute top-2.5 left-2.5">
+                <span class="px-2 py-0.5 rounded text-[10px] font-medium bg-white/95 dark:bg-stone-900/90 text-stone-700 dark:text-stone-300 border border-stone-200 dark:border-stone-700 shadow-sm">
+                  당일 새벽 찜
+                </span>
+              </div>
+            </div>
+            <div class="p-4">
+              <div class="flex items-center justify-between text-[11px] text-stone-400 dark:text-stone-500">
+                <span>전통 시루떡</span>
+                <span>반말 / 1말 맞춤</span>
+              </div>
+              <h3 class="text-base font-semibold text-stone-900 dark:text-white mt-1 korean-title">용인 백옥쌀 순백설기 (1말)</h3>
+              <p class="text-stone-500 dark:text-stone-400 text-xs mt-1 line-clamp-2">
+                용인 햅쌀 본연의 은은한 단맛과 구수한 쌀 향기. 부드럽고 촉촉해 아침 식사 대용으로 훌륭합니다.
+              </p>
+            </div>
+          </div>
+          <div class="px-4 pb-4 pt-2 border-t border-stone-100 dark:border-stone-800 flex items-center justify-between">
+            <div>
+              <span class="text-[11px] text-stone-400 dark:text-stone-500">1말 (약 45~50개)</span>
+              <p class="text-base font-bold text-stone-900 dark:text-white">75,000<span class="text-xs font-normal text-stone-500 ml-0.5">원</span></p>
+            </div>
+            <button onclick="quickOrder('용인 백옥쌀 순백설기 (1말)', 75000)" class="px-3 py-1.5 rounded-lg bg-gradient-to-r from-stone-900 to-stone-800 dark:from-stone-100 dark:to-stone-200 text-white dark:text-stone-900 text-xs font-semibold hover:brightness-110 active:scale-95 transition flex items-center gap-1 shadow-xs">
+              <i data-lucide="plus" class="w-3.5 h-3.5"></i> 견적 담기
+            </button>
+          </div>
+        </div>
+
+        <!-- Product 3 -->
+        <div class="menu-item fusion bg-white dark:bg-stone-900 rounded-xl overflow-hidden border border-stone-200 dark:border-stone-800 hover:border-stone-400 dark:hover:border-stone-700 shadow-xs hover:shadow-md transition-all group flex flex-col justify-between">
+          <div>
+            <div class="relative h-48 bg-stone-50 dark:bg-stone-800 overflow-hidden">
+              <img 
+                src="https://images.unsplash.com/photo-1509440159596-0249088772ff?auto=format&fit=crop&w=600&q=80" 
+                alt="남사 쇠머리 영양찰떡"
+                class="w-full h-full object-cover brightness-105 group-hover:scale-105 transition duration-500"
+                onerror="this.src='https://placehold.co/600x400/FAFAFA/333333?text=모둠영양찰떡'"
+              >
+              <div class="absolute top-2.5 left-2.5">
+                <span class="px-2 py-0.5 rounded text-[10px] font-medium bg-white/95 dark:bg-stone-900/90 text-stone-700 dark:text-stone-300 border border-stone-200 dark:border-stone-700 shadow-sm">
+                  개별 급랭 포장
+                </span>
+              </div>
+            </div>
+            <div class="p-4">
+              <div class="flex items-center justify-between text-[11px] text-stone-400 dark:text-stone-500">
+                <span>영양 간식</span>
+                <span>공주 밤 · 서리태</span>
+              </div>
+              <h3 class="text-base font-semibold text-stone-900 dark:text-white mt-1 korean-title">남사 모둠 영양찰떡 20구</h3>
+              <p class="text-stone-500 dark:text-stone-400 text-xs mt-1 line-clamp-2">
+                공주 밤, 서리태, 대추, 완두가 실하게 들어간 찰떡. 낱개 포장되어 자연 해동 후 간편하게 즐기실 수 있습니다.
+              </p>
+            </div>
+          </div>
+          <div class="px-4 pb-4 pt-2 border-t border-stone-100 dark:border-stone-800 flex items-center justify-between">
+            <div>
+              <span class="text-[11px] text-stone-400 dark:text-stone-500">20개 선물박스</span>
+              <p class="text-base font-bold text-stone-900 dark:text-white">42,000<span class="text-xs font-normal text-stone-500 ml-0.5">원</span></p>
+            </div>
+            <button onclick="quickOrder('남사 모둠 영양찰떡 20구', 42000)" class="px-3 py-1.5 rounded-lg bg-gradient-to-r from-stone-900 to-stone-800 dark:from-stone-100 dark:to-stone-200 text-white dark:text-stone-900 text-xs font-semibold hover:brightness-110 active:scale-95 transition flex items-center gap-1 shadow-xs">
+              <i data-lucide="plus" class="w-3.5 h-3.5"></i> 견적 담기
+            </button>
+          </div>
+        </div>
+
+        <!-- Product 4 -->
+        <div class="menu-item traditional bg-white dark:bg-stone-900 rounded-xl overflow-hidden border border-stone-200 dark:border-stone-800 hover:border-stone-400 dark:hover:border-stone-700 shadow-xs hover:shadow-md transition-all group flex flex-col justify-between">
+          <div>
+            <div class="relative h-48 bg-stone-50 dark:bg-stone-800 overflow-hidden">
+              <img 
+                src="https://images.unsplash.com/photo-1546069901-ba9599a7e63c?auto=format&fit=crop&w=600&q=80" 
+                alt="생쑥 콩고물 인절미"
+                class="w-full h-full object-cover brightness-105 group-hover:scale-105 transition duration-500"
+                onerror="this.src='https://placehold.co/600x400/FAFAFA/333333?text=생쑥+인절미'"
+              >
+              <div class="absolute top-2.5 left-2.5">
+                <span class="px-2 py-0.5 rounded text-[10px] font-medium bg-white/95 dark:bg-stone-900/90 text-stone-700 dark:text-stone-300 border border-stone-200 dark:border-stone-700 shadow-sm">
+                  청정 쑥 100%
+                </span>
+              </div>
+            </div>
+            <div class="p-4">
+              <div class="flex items-center justify-between text-[11px] text-stone-400 dark:text-stone-500">
+                <span>전통 방앗간 떡</span>
+                <span>볶은 콩고물 동봉</span>
+              </div>
+              <h3 class="text-base font-semibold text-stone-900 dark:text-white mt-1 korean-title">남사 생쑥 콩고물 인절미 (1kg)</h3>
+              <p class="text-stone-500 dark:text-stone-400 text-xs mt-1 line-clamp-2">
+                봄철 채취한 생쑥의 싱그러운 향과 고소하게 볶아 갈아낸 콩고물이 어우러진 정통 인절미입니다.
+              </p>
+            </div>
+          </div>
+          <div class="px-4 pb-4 pt-2 border-t border-stone-100 dark:border-stone-800 flex items-center justify-between">
+            <div>
+              <span class="text-[11px] text-stone-400 dark:text-stone-500">1kg 팩</span>
+              <p class="text-base font-bold text-stone-900 dark:text-white">18,000<span class="text-xs font-normal text-stone-500 ml-0.5">원</span></p>
+            </div>
+            <button onclick="quickOrder('남사 생쑥 콩고물 인절미 (1kg)', 18000)" class="px-3 py-1.5 rounded-lg bg-gradient-to-r from-stone-900 to-stone-800 dark:from-stone-100 dark:to-stone-200 text-white dark:text-stone-900 text-xs font-semibold hover:brightness-110 active:scale-95 transition flex items-center gap-1 shadow-xs">
+              <i data-lucide="plus" class="w-3.5 h-3.5"></i> 견적 담기
+            </button>
+          </div>
+        </div>
+
+        <!-- Product 5 -->
+        <div class="menu-item holiday gift bg-white dark:bg-stone-900 rounded-xl overflow-hidden border border-stone-200 dark:border-stone-800 hover:border-stone-400 dark:hover:border-stone-700 shadow-xs hover:shadow-md transition-all group flex flex-col justify-between">
+          <div>
+            <div class="relative h-48 bg-stone-50 dark:bg-stone-800 overflow-hidden">
+              <img 
+                src="https://images.unsplash.com/photo-1513519245088-0e12902e5a38?auto=format&fit=crop&w=600&q=80" 
+                alt="명품 보자기 이바지 선물세트"
+                class="w-full h-full object-cover brightness-105 group-hover:scale-105 transition duration-500"
+                onerror="this.src='https://placehold.co/600x400/FAFAFA/333333?text=보자기+선물세트'"
+              >
+              <div class="absolute top-2.5 left-2.5">
+                <span class="px-2 py-0.5 rounded text-[10px] font-medium bg-white/95 dark:bg-stone-900/90 text-stone-700 dark:text-stone-300 border border-stone-200 dark:border-stone-700 shadow-sm">
+                  비단 보자기
+                </span>
+              </div>
+            </div>
+            <div class="p-4">
+              <div class="flex items-center justify-between text-[11px] text-stone-400 dark:text-stone-500">
+                <span>예단 · 이바지</span>
+                <span>노리개 장식 포함</span>
+              </div>
+              <h3 class="text-base font-semibold text-stone-900 dark:text-white mt-1 korean-title">남사 명품 이바지 5합 세트</h3>
+              <p class="text-stone-500 dark:text-stone-400 text-xs mt-1 line-clamp-2">
+                꽃두태떡, 구름떡, 약식, 흑임자찰떡을 단정한 상자에 담고 고급 비단 보자기 매듭으로 포장합니다.
+              </p>
+            </div>
+          </div>
+          <div class="px-4 pb-4 pt-2 border-t border-stone-100 dark:border-stone-800 flex items-center justify-between">
+            <div>
+              <span class="text-[11px] text-stone-400 dark:text-stone-500">프리미엄 1세트</span>
+              <p class="text-base font-bold text-stone-900 dark:text-white">120,000<span class="text-xs font-normal text-stone-500 ml-0.5">원</span></p>
+            </div>
+            <button onclick="quickOrder('남사 명품 이바지 5합 세트', 120000)" class="px-3 py-1.5 rounded-lg bg-gradient-to-r from-stone-900 to-stone-800 dark:from-stone-100 dark:to-stone-200 text-white dark:text-stone-900 text-xs font-semibold hover:brightness-110 active:scale-95 transition flex items-center gap-1 shadow-xs">
+              <i data-lucide="plus" class="w-3.5 h-3.5"></i> 견적 담기
+            </button>
+          </div>
+        </div>
+
+        <!-- Product 6 -->
+        <div class="menu-item fusion bg-white dark:bg-stone-900 rounded-xl overflow-hidden border border-stone-200 dark:border-stone-800 hover:border-stone-400 dark:hover:border-stone-700 shadow-xs hover:shadow-md transition-all group flex flex-col justify-between">
+          <div>
+            <div class="relative h-48 bg-stone-50 dark:bg-stone-800 overflow-hidden">
+              <img 
+                src="https://images.unsplash.com/photo-1563805042-7684c019e1cb?auto=format&fit=crop&w=600&q=80" 
+                alt="수제 통팥 찹쌀떡"
+                class="w-full h-full object-cover brightness-105 group-hover:scale-105 transition duration-500"
+                onerror="this.src='https://placehold.co/600x400/FAFAFA/333333?text=수제통팥찹쌀떡'"
+              >
+              <div class="absolute top-2.5 left-2.5">
+                <span class="px-2 py-0.5 rounded text-[10px] font-medium bg-white/95 dark:bg-stone-900/90 text-stone-700 dark:text-stone-300 border border-stone-200 dark:border-stone-700 shadow-sm">
+                  국산 붉은팥
+                </span>
+              </div>
+            </div>
+            <div class="p-4">
+              <div class="flex items-center justify-between text-[11px] text-stone-400 dark:text-stone-500">
+                <span>저당 수제앙금</span>
+                <span>호두 · 잣 고명</span>
+              </div>
+              <h3 class="text-base font-semibold text-stone-900 dark:text-white mt-1 korean-title">남사 수제 통팥 찹쌀떡 12구</h3>
+              <p class="text-stone-500 dark:text-stone-400 text-xs mt-1 line-clamp-2">
+                달지 않게 직접 삶은 통팥 소에 호두를 듬뿍 넣어 씹는 맛과 고소함을 온전히 살렸습니다.
+              </p>
+            </div>
+          </div>
+          <div class="px-4 pb-4 pt-2 border-t border-stone-100 dark:border-stone-800 flex items-center justify-between">
+            <div>
+              <span class="text-[11px] text-stone-400 dark:text-stone-500">12구 상자</span>
+              <p class="text-base font-bold text-stone-900 dark:text-white">26,000<span class="text-xs font-normal text-stone-500 ml-0.5">원</span></p>
+            </div>
+            <button onclick="quickOrder('남사 수제 통팥 찹쌀떡 12구', 26000)" class="px-3 py-1.5 rounded-lg bg-gradient-to-r from-stone-900 to-stone-800 dark:from-stone-100 dark:to-stone-200 text-white dark:text-stone-900 text-xs font-semibold hover:brightness-110 active:scale-95 transition flex items-center gap-1 shadow-xs">
+              <i data-lucide="plus" class="w-3.5 h-3.5"></i> 견적 담기
+            </button>
+          </div>
+        </div>
+
+        <!-- Product 7 -->
+        <div class="menu-item traditional bg-white dark:bg-stone-900 rounded-xl overflow-hidden border border-stone-200 dark:border-stone-800 hover:border-stone-400 dark:hover:border-stone-700 shadow-xs hover:shadow-md transition-all group flex flex-col justify-between">
+          <div>
+            <div class="relative h-48 bg-stone-50 dark:bg-stone-800 overflow-hidden">
+              <img 
+                src="https://images.unsplash.com/photo-1504674900247-0877df9cc836?auto=format&fit=crop&w=600&q=80" 
+                alt="팥시루편"
+                class="w-full h-full object-cover brightness-105 group-hover:scale-105 transition duration-500"
+                onerror="this.src='https://placehold.co/600x400/FAFAFA/333333?text=팥시루떡'"
+              >
+              <div class="absolute top-2.5 left-2.5">
+                <span class="px-2 py-0.5 rounded text-[10px] font-medium bg-white/95 dark:bg-stone-900/90 text-stone-700 dark:text-stone-300 border border-stone-200 dark:border-stone-700 shadow-sm">
+                  개업 · 고사
+                </span>
+              </div>
+            </div>
+            <div class="p-4">
+              <div class="flex items-center justify-between text-[11px] text-stone-400 dark:text-stone-500">
+                <span>개업 · 이사</span>
+                <span>보온 박스 포장</span>
+              </div>
+              <h3 class="text-base font-semibold text-stone-900 dark:text-white mt-1 korean-title">정성 팥시루편 (반말)</h3>
+              <p class="text-stone-500 dark:text-stone-400 text-xs mt-1 line-clamp-2">
+                도톰하게 얹은 팥고물이 액운을 막고 복을 기원합니다. 바로 나누기 좋게 낱개 커팅되어 나갑니다.
+              </p>
+            </div>
+          </div>
+          <div class="px-4 pb-4 pt-2 border-t border-stone-100 dark:border-stone-800 flex items-center justify-between">
+            <div>
+              <span class="text-[11px] text-stone-400 dark:text-stone-500">반말 기준</span>
+              <p class="text-base font-bold text-stone-900 dark:text-white">55,000<span class="text-xs font-normal text-stone-500 ml-0.5">원</span></p>
+            </div>
+            <button onclick="quickOrder('정성 팥시루편 (반말)', 55000)" class="px-3 py-1.5 rounded-lg bg-gradient-to-r from-stone-900 to-stone-800 dark:from-stone-100 dark:to-stone-200 text-white dark:text-stone-900 text-xs font-semibold hover:brightness-110 active:scale-95 transition flex items-center gap-1 shadow-xs">
+              <i data-lucide="plus" class="w-3.5 h-3.5"></i> 견적 담기
+            </button>
+          </div>
+        </div>
+
+        <!-- Product 8 -->
+        <div class="menu-item gift bg-white dark:bg-stone-900 rounded-xl overflow-hidden border border-stone-200 dark:border-stone-800 hover:border-stone-400 dark:hover:border-stone-700 shadow-xs hover:shadow-md transition-all group flex flex-col justify-between">
+          <div>
+            <div class="relative h-48 bg-stone-50 dark:bg-stone-800 overflow-hidden">
+              <img 
+                src="https://images.unsplash.com/photo-1541658016709-82535e94bc69?auto=format&fit=crop&w=600&q=80" 
+                alt="백일 돌 상차림 세트"
+                class="w-full h-full object-cover brightness-105 group-hover:scale-105 transition duration-500"
+                onerror="this.src='https://placehold.co/600x400/FAFAFA/333333?text=백일돌상세트'"
+              >
+              <div class="absolute top-2.5 left-2.5">
+                <span class="px-2 py-0.5 rounded text-[10px] font-medium bg-white/95 dark:bg-stone-900/90 text-stone-700 dark:text-stone-300 border border-stone-200 dark:border-stone-700 shadow-sm">
+                  상차림 3종
+                </span>
+              </div>
+            </div>
+            <div class="p-4">
+              <div class="flex items-center justify-between text-[11px] text-stone-400 dark:text-stone-500">
+                <span>백일 · 첫돌</span>
+                <span>무병장수 기원</span>
+              </div>
+              <h3 class="text-base font-semibold text-stone-900 dark:text-white mt-1 korean-title">백일·첫돌 상차림 3종 세트</h3>
+              <p class="text-stone-500 dark:text-stone-400 text-xs mt-1 line-clamp-2">
+                한자 '百' 꿀설기 25개 + 수수팥떡 1kg + 오색도장송편 1kg으로 정성껏 차리는 필수 상차림 세트입니다.
+              </p>
+            </div>
+          </div>
+          <div class="px-4 pb-4 pt-2 border-t border-stone-100 dark:border-stone-800 flex items-center justify-between">
+            <div>
+              <span class="text-[11px] text-stone-400 dark:text-stone-500">상차림 풀세트</span>
+              <p class="text-base font-bold text-stone-900 dark:text-white">88,000<span class="text-xs font-normal text-stone-500 ml-0.5">원</span></p>
+            </div>
+            <button onclick="quickOrder('백일·첫돌 상차림 3종 세트', 88000)" class="px-3 py-1.5 rounded-lg bg-gradient-to-r from-stone-900 to-stone-800 dark:from-stone-100 dark:to-stone-200 text-white dark:text-stone-900 text-xs font-semibold hover:brightness-110 active:scale-95 transition flex items-center gap-1 shadow-xs">
+              <i data-lucide="plus" class="w-3.5 h-3.5"></i> 견적 담기
+            </button>
+          </div>
+        </div>
+
+      </div>
+    </div>
+  </section>
+
+  <!-- Gallery Section: Advanced CSS Grid Masonry -->
+  <section id="gallery" class="py-16 bg-white dark:bg-stone-950">
+    <div class="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
+      <div class="text-center max-w-2xl mx-auto mb-12 space-y-2">
+        <span class="text-stone-500 dark:text-stone-400 text-xs font-semibold uppercase tracking-widest bg-stone-100 dark:bg-stone-900 px-3 py-1 rounded-full border border-stone-200 dark:border-stone-800">
+          Gallery
+        </span>
+        <h2 class="korean-title text-2xl sm:text-3xl font-bold text-stone-900 dark:text-white">
+          남사의 새벽과 정성이 머무는 풍경
+        </h2>
+        <p class="text-stone-500 dark:text-stone-400 text-xs">
+          가마솥의 맑은 증기, 정갈한 도자기 그릇, 정성을 묶은 보자기 매듭을 담았습니다.
+        </p>
+      </div>
+
+      <!-- CSS Grid Gallery with Masonry Spans -->
+      <div class="gallery-grid lg:gallery-masonry">
+        
+        <!-- Gallery Item 1 -->
+        <div class="relative rounded-2xl overflow-hidden group border border-stone-200 dark:border-stone-800 bg-stone-50 dark:bg-stone-900 shadow-xs lg:grid-span-2-col">
+          <img 
+            src="https://images.unsplash.com/photo-1578985545062-69928b1d9587?auto=format&fit=crop&w=1200&q=80" 
+            alt="순백의 시루와 설기" 
+            class="w-full h-64 lg:h-full object-cover brightness-105 group-hover:scale-103 transition duration-700"
+            onerror="this.src='https://placehold.co/800x600/FAFAFA/333333?text=순백설기+시루'"
+          >
+          <div class="absolute inset-0 bg-gradient-to-t from-black/70 via-black/20 to-transparent"></div>
+          <div class="absolute bottom-4 left-4 right-4 text-white">
+            <span class="text-[10px] uppercase tracking-wider text-stone-300">새벽 첫 공정</span>
+            <p class="font-semibold text-base korean-title">장인의 손길로 찌는 순백설기</p>
+          </div>
+        </div>
+
+        <!-- Gallery Item 2 -->
+        <div class="relative rounded-2xl overflow-hidden group border border-stone-200 dark:border-stone-800 bg-stone-50 dark:bg-stone-900 shadow-xs">
+          <img 
+            src="https://images.unsplash.com/photo-1590080875515-8a3a8dc5735e?auto=format&fit=crop&w=600&q=80" 
+            alt="정갈한 백설기 단면" 
+            class="w-full h-64 lg:h-full object-cover brightness-105 group-hover:scale-103 transition duration-700"
+            onerror="this.src='https://placehold.co/600x600/FAFAFA/333333?text=정갈한+설기결'"
+          >
+          <div class="absolute inset-0 bg-gradient-to-t from-black/70 via-transparent to-transparent"></div>
+          <div class="absolute bottom-4 left-4 text-white">
+            <p class="font-semibold text-sm korean-title">촉촉하고 부드러운 쌀결</p>
+          </div>
+        </div>
+
+        <!-- Gallery Item 3 -->
+        <div class="relative rounded-2xl overflow-hidden group border border-stone-200 dark:border-stone-800 bg-stone-50 dark:bg-stone-900 shadow-xs">
+          <img 
+            src="https://images.unsplash.com/photo-1563805042-7684c019e1cb?auto=format&fit=crop&w=600&q=80" 
+            alt="가마솥 수제 통팥 찹쌀떡" 
+            class="w-full h-64 lg:h-full object-cover brightness-105 group-hover:scale-103 transition duration-700"
+            onerror="this.src='https://placehold.co/600x600/FAFAFA/333333?text=수제찹쌀떡'"
+          >
+          <div class="absolute inset-0 bg-gradient-to-t from-black/70 via-transparent to-transparent"></div>
+          <div class="absolute bottom-4 left-4 text-white">
+            <p class="font-semibold text-sm korean-title">은근히 조린 국산 통팥</p>
+          </div>
+        </div>
+
+        <!-- Gallery Item 4 -->
+        <div class="relative rounded-2xl overflow-hidden group border border-stone-200 dark:border-stone-800 bg-stone-50 dark:bg-stone-900 shadow-xs">
+          <img 
+            src="https://images.unsplash.com/photo-1546069901-ba9599a7e63c?auto=format&fit=crop&w=600&q=80" 
+            alt="생쑥 치대기" 
+            class="w-full h-64 lg:h-full object-cover brightness-105 group-hover:scale-103 transition duration-700"
+            onerror="this.src='https://placehold.co/600x600/FAFAFA/333333?text=자연산생쑥'"
+          >
+          <div class="absolute inset-0 bg-gradient-to-t from-black/70 via-transparent to-transparent"></div>
+          <div class="absolute bottom-4 left-4 text-white">
+            <p class="font-semibold text-sm korean-title">자연 그대로의 청정 생쑥</p>
+          </div>
+        </div>
+
+        <!-- Gallery Item 5 -->
+        <div class="relative rounded-2xl overflow-hidden group border border-stone-200 dark:border-stone-800 bg-stone-50 dark:bg-stone-900 shadow-xs lg:grid-span-2-col">
+          <img 
+            src="https://images.unsplash.com/photo-1513519245088-0e12902e5a38?auto=format&fit=crop&w=1200&q=80" 
+            alt="전통 보자기 정갈한 매듭" 
+            class="w-full h-64 lg:h-full object-cover brightness-105 group-hover:scale-103 transition duration-700"
+            onerror="this.src='https://placehold.co/800x600/FAFAFA/333333?text=단아한+보자기매듭'"
+          >
+          <div class="absolute inset-0 bg-gradient-to-t from-black/70 via-black/20 to-transparent"></div>
+          <div class="absolute bottom-4 left-4 right-4 text-white">
+            <span class="text-[10px] uppercase tracking-wider text-stone-300">정성의 매듭</span>
+            <p class="font-semibold text-base korean-title">마음을 담는 단아한 전통 보자기</p>
+          </div>
+        </div>
+
+        <!-- Gallery Item 6 -->
+        <div class="relative rounded-2xl overflow-hidden group border border-stone-200 dark:border-stone-800 bg-stone-50 dark:bg-stone-900 shadow-xs">
+          <img 
+            src="https://images.unsplash.com/photo-1509440159596-0249088772ff?auto=format&fit=crop&w=600&q=80" 
+            alt="위생 개별포장 찰떡" 
+            class="w-full h-64 lg:h-full object-cover brightness-105 group-hover:scale-103 transition duration-700"
+            onerror="this.src='https://placehold.co/600x600/FAFAFA/333333?text=위생개별포장'"
+          >
+          <div class="absolute inset-0 bg-gradient-to-t from-black/70 via-transparent to-transparent"></div>
+          <div class="absolute bottom-4 left-4 text-white">
+            <p class="font-semibold text-sm korean-title">위생적인 개별 급랭 포장</p>
+          </div>
+        </div>
+
+      </div>
+    </div>
+  </section>
+
+  <!-- Interactive Estimator Section -->
+  <section id="estimate" class="py-16 bg-stone-50/70 dark:bg-stone-900/40">
+    <div class="max-w-4xl mx-auto px-4 sm:px-6 lg:px-8">
+      <div class="text-center max-w-xl mx-auto mb-10 space-y-2">
+        <span class="inline-flex items-center gap-1.5 px-3 py-1 rounded-full text-xs font-semibold bg-white dark:bg-stone-900 border border-stone-200 dark:border-stone-800 text-stone-700 dark:text-stone-300 shadow-xs">
+          <i data-lucide="calculator" class="w-3.5 h-3.5 text-stone-500"></i> 실시간 간편 견적기
+        </span>
+        <h2 class="korean-title text-2xl sm:text-3xl font-bold text-stone-900 dark:text-white">
+          필요한 수량과 구성을 직접 계산해보세요
+        </h2>
+        <p class="text-stone-500 dark:text-stone-400 text-xs sm:text-sm">
+          답례떡, 백일/돌떡, 선물세트의 예상 비용을 즉시 확인하고 바로 상담을 예약하실 수 있습니다.
+        </p>
+      </div>
+
+      <!-- Estimator Card with Gradient Accents -->
+      <div class="bg-white dark:bg-stone-900 rounded-2xl p-6 sm:p-8 shadow-md border border-stone-200 dark:border-stone-800">
+        <div class="grid grid-cols-1 lg:grid-cols-12 gap-8 items-start">
+          
+          <!-- Left Inputs -->
+          <div class="lg:col-span-7 space-y-5">
+            <div>
+              <label class="block text-xs font-semibold text-stone-900 dark:text-stone-100 uppercase tracking-wider mb-2">
+                1. 떡 구성 선택
+              </label>
+              <select id="calcType" onchange="calculateTotal()" class="w-full px-3.5 py-3 rounded-xl border border-stone-200 dark:border-stone-700 bg-stone-50/70 dark:bg-stone-800 text-stone-900 dark:text-stone-100 text-xs font-medium focus:ring-2 focus:ring-stone-400 dark:focus:ring-stone-600 focus:outline-none transition">
+                <option value="3500" data-name="답례떡 2구 세트 (설기+경단)">답례떡 2구 세트 (설기 + 경단) - 3,500원/세트</option>
+                <option value="5000" data-name="답례떡 3구 프리미엄 (설기+찰떡+송편)">답례떡 3구 프리미엄 (설기 + 찰떡 + 송편) - 5,000원/세트</option>
+                <option value="75000" data-name="용인 백옥쌀 순백설기 1말 (약 45~50개)">용인 백옥쌀 순백설기 1말 (약 45~50개) - 75,000원</option>
+                <option value="42000" data-name="모둠 영양찰떡 20구 선물세트">모둠 영양찰떡 20구 선물세트 - 42,000원</option>
+                <option value="88000" data-name="백일·첫돌 상차림 3종 풀패키지">백일·첫돌 상차림 3종 풀패키지 (설기+수수팥떡+송편) - 88,000원</option>
+                <option value="120000" data-name="명품 이바지 5합 세트 (비단포장 포함)">명품 이바지 5합 세트 (비단포장 포함) - 120,000원</option>
+              </select>
+            </div>
+
+            <!-- Quantity Slider -->
+            <div>
+              <div class="flex items-center justify-between mb-2">
+                <label class="text-xs font-semibold text-stone-900 dark:text-stone-100 uppercase tracking-wider">
+                  2. 주문 수량
+                </label>
+                <span id="qtyDisplay" class="text-xs font-semibold text-stone-800 dark:text-stone-200 bg-stone-100 dark:bg-stone-800 px-2.5 py-0.5 rounded border border-stone-200 dark:border-stone-700">
+                  20 개/세트
+                </span>
+              </div>
+              <input 
+                id="calcQty" 
+                type="range" 
+                min="1" 
+                max="200" 
+                value="20" 
+                oninput="updateQuantity(this.value)" 
+                class="w-full h-1.5 bg-stone-200 dark:bg-stone-700 rounded-lg appearance-none cursor-pointer accent-stone-800 dark:accent-stone-200"
+              >
+              <div class="flex justify-between text-[10px] text-stone-400 mt-1">
+                <span>1개</span>
+                <span>50개</span>
+                <span>100개</span>
+                <span>200개 이상</span>
+              </div>
+            </div>
+
+            <!-- Packaging -->
+            <div>
+              <label class="block text-xs font-semibold text-stone-900 dark:text-stone-100 uppercase tracking-wider mb-2">
+                3. 포장 옵션 선택
+              </label>
+              <div class="grid grid-cols-1 sm:grid-cols-2 gap-2.5">
+                <label class="flex items-center gap-2.5 p-3 rounded-xl border border-stone-200 dark:border-stone-700 hover:bg-stone-50 dark:hover:bg-stone-800 cursor-pointer transition">
+                  <input type="radio" name="packaging" value="0" checked onchange="calculateTotal()" class="text-stone-800 dark:text-stone-200 focus:ring-stone-400">
+                  <div>
+                    <p class="text-xs font-medium text-stone-800 dark:text-stone-200">기본 단정한 상자 포장</p>
+                    <p class="text-[10px] text-stone-400">라벨 스티커 무료 부착</p>
+                  </div>
+                </label>
+                <label class="flex items-center gap-2.5 p-3 rounded-xl border border-stone-200 dark:border-stone-700 hover:bg-stone-50 dark:hover:bg-stone-800 cursor-pointer transition">
+                  <input type="radio" name="packaging" value="5000" onchange="calculateTotal()" class="text-stone-800 dark:text-stone-200 focus:ring-stone-400">
+                  <div>
+                    <p class="text-xs font-medium text-stone-800 dark:text-stone-200">고급 비단 보자기 (+5,000원)</p>
+                    <p class="text-[10px] text-stone-400">격식 있는 축하와 선물</p>
+                  </div>
+                </label>
+              </div>
+            </div>
+
+            <!-- Contact Input -->
+            <div class="pt-2 border-t border-stone-100 dark:border-stone-800 grid grid-cols-1 sm:grid-cols-2 gap-2.5">
+              <div>
+                <label class="block text-[11px] font-medium text-stone-600 dark:text-stone-400 mb-1">성함 / 상호명</label>
+                <input id="userName" type="text" placeholder="예: 홍길동" class="w-full px-3 py-2 text-xs rounded-lg border border-stone-200 dark:border-stone-700 bg-white dark:bg-stone-800 text-stone-800 dark:text-stone-100 focus:outline-none focus:ring-1 focus:ring-stone-400">
+              </div>
+              <div>
+                <label class="block text-[11px] font-medium text-stone-600 dark:text-stone-400 mb-1">연락처</label>
+                <input id="userPhone" type="tel" placeholder="010-0000-0000" class="w-full px-3 py-2 text-xs rounded-lg border border-stone-200 dark:border-stone-700 bg-white dark:bg-stone-800 text-stone-800 dark:text-stone-100 focus:outline-none focus:ring-1 focus:ring-stone-400">
+              </div>
+            </div>
+          </div>
+
+          <!-- Right Summary Box with Charcoal Gradient -->
+          <div class="lg:col-span-5 bg-gradient-to-b from-stone-900 via-stone-800 to-stone-950 dark:from-stone-800 dark:via-stone-900 dark:to-stone-950 p-6 rounded-2xl text-white flex flex-col justify-between h-full shadow-lg border border-stone-700 dark:border-stone-700">
+            <div class="space-y-4">
+              <div class="flex items-center justify-between pb-3 border-b border-white/10">
+                <span class="text-xs text-stone-300 font-medium">예상 견적서</span>
+                <span class="text-[10px] text-stone-300 bg-white/10 px-2 py-0.5 rounded">실시간 산출</span>
+              </div>
+
+              <div>
+                <span class="text-[11px] text-stone-400">선택 떡</span>
+                <p id="summaryMenuName" class="text-xs sm:text-sm font-semibold text-white korean-title mt-0.5">답례떡 2구 세트</p>
+              </div>
+
+              <div class="flex justify-between text-xs text-stone-300">
+                <span>기본 금액 (<span id="summaryQty">20</span>개)</span>
+                <span id="summaryBasePrice">70,000원</span>
+              </div>
+
+              <div class="flex justify-between text-xs text-stone-300">
+                <span>포장 옵션</span>
+                <span id="summaryPackPrice">무료</span>
+              </div>
+
+              <div class="pt-3 border-t border-white/10">
+                <span class="text-[11px] text-stone-400">최종 예상 합계</span>
+                <div class="flex items-baseline justify-between mt-0.5">
+                  <p class="text-xl sm:text-2xl font-bold text-white" id="totalAmount">70,000<span class="text-xs font-normal text-stone-300 ml-1">원</span></p>
+                </div>
+                <p class="text-[10px] text-stone-400 mt-1">* 100개 이상 대량 주문 시 추가 할인이 가능합니다.</p>
+              </div>
+            </div>
+
+            <!-- Submit Button with Gradient -->
+            <div class="mt-6 space-y-2">
+              <button onclick="submitInquiry()" class="w-full py-3 rounded-xl bg-gradient-to-r from-stone-100 to-stone-200 hover:from-white hover:to-stone-100 text-stone-900 font-bold text-xs shadow-md active:scale-95 transition-all flex items-center justify-center gap-1.5">
+                <i data-lucide="send" class="w-3.5 h-3.5 text-stone-800"></i>
+                <span>이 견적으로 상담 예약</span>
+              </button>
+              <a href="tel:031-332-9080" class="w-full py-2.5 rounded-xl bg-white/10 hover:bg-white/15 text-stone-200 text-xs font-medium flex items-center justify-center gap-1.5 transition">
+                <i data-lucide="phone-call" class="w-3.5 h-3.5 text-stone-300"></i> 사장님 전화 바로상담
+              </a>
+            </div>
+          </div>
+
+        </div>
+      </div>
+    </div>
+  </section>
+
+  <!-- Customer Reviews: CSS Grid 3 Columns -->
+  <section class="py-16 bg-white dark:bg-stone-950 border-y border-stone-200/70 dark:border-stone-800">
+    <div class="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
+      <div class="text-center max-w-xl mx-auto mb-10">
+        <h2 class="korean-title text-xl sm:text-2xl font-bold text-stone-900 dark:text-white">
+          용인 이웃들이 남겨주신 정갈한 후기
+        </h2>
+        <p class="text-stone-400 dark:text-stone-500 text-xs mt-1">첫돌, 결혼식, 명절을 함께해주신 고객님들의 솔직한 이야기입니다.</p>
+      </div>
+
+      <div class="grid grid-cols-1 md:grid-cols-3 gap-5">
+        <!-- Review 1 -->
+        <div class="p-5 rounded-xl bg-white dark:bg-stone-900 border border-stone-200 dark:border-stone-800 shadow-xs flex flex-col justify-between">
+          <div>
+            <div class="flex items-center gap-1 text-stone-400 mb-2">
+              <i data-lucide="star" class="w-3.5 h-3.5 fill-stone-700 dark:fill-stone-300 text-stone-700 dark:text-stone-300"></i>
+              <i data-lucide="star" class="w-3.5 h-3.5 fill-stone-700 dark:fill-stone-300 text-stone-700 dark:text-stone-300"></i>
+              <i data-lucide="star" class="w-3.5 h-3.5 fill-stone-700 dark:fill-stone-300 text-stone-700 dark:text-stone-300"></i>
+              <i data-lucide="star" class="w-3.5 h-3.5 fill-stone-700 dark:fill-stone-300 text-stone-700 dark:text-stone-300"></i>
+              <i data-lucide="star" class="w-3.5 h-3.5 fill-stone-700 dark:fill-stone-300 text-stone-700 dark:text-stone-300"></i>
+            </div>
+            <p class="text-xs text-stone-600 dark:text-stone-400 leading-relaxed">
+              "결혼식 답례떡으로 주문했습니다. 설기가 전혀 퍽퍽하지 않고 당일 새벽에 쪄서 점심때까지 온기가 남아있었어요. 하얀 상자 패키지가 너무 단아해서 회사 분들에게 칭찬을 참 많이 받았습니다."
+            </p>
+          </div>
+          <div class="mt-4 pt-3 border-t border-stone-100 dark:border-stone-800 flex items-center justify-between text-[11px] text-stone-400">
+            <span class="font-medium text-stone-800 dark:text-stone-200">김*희 님 (역북동)</span>
+            <span>답례떡 2구 120세트</span>
+          </div>
+        </div>
+
+        <!-- Review 2 -->
+        <div class="p-5 rounded-xl bg-white dark:bg-stone-900 border border-stone-200 dark:border-stone-800 shadow-xs flex flex-col justify-between">
+          <div>
+            <div class="flex items-center gap-1 text-stone-400 mb-2">
+              <i data-lucide="star" class="w-3.5 h-3.5 fill-stone-700 dark:fill-stone-300 text-stone-700 dark:text-stone-300"></i>
+              <i data-lucide="star" class="w-3.5 h-3.5 fill-stone-700 dark:fill-stone-300 text-stone-700 dark:text-stone-300"></i>
+              <i data-lucide="star" class="w-3.5 h-3.5 fill-stone-700 dark:fill-stone-300 text-stone-700 dark:text-stone-300"></i>
+              <i data-lucide="star" class="w-3.5 h-3.5 fill-stone-700 dark:fill-stone-300 text-stone-700 dark:text-stone-300"></i>
+              <i data-lucide="star" class="w-3.5 h-3.5 fill-stone-700 dark:fill-stone-300 text-stone-700 dark:text-stone-300"></i>
+            </div>
+            <p class="text-xs text-stone-600 dark:text-stone-400 leading-relaxed">
+              "어머니 칠순 잔치에 이바지 5합 세트로 맞췄습니다. 비단 보자기 매듭이 정말 정갈했고, 찰떡에 밤이랑 대추가 아낌없이 들어가 있어 어르신들께서 어디서 맞췄냐고 물어보셨네요."
+            </p>
+          </div>
+          <div class="mt-4 pt-3 border-t border-stone-100 dark:border-stone-800 flex items-center justify-between text-[11px] text-stone-400">
+            <span class="font-medium text-stone-800 dark:text-stone-200">박*준 님 (보정동)</span>
+            <span>명품 이바지 세트</span>
+          </div>
+        </div>
+
+        <!-- Review 3 -->
+        <div class="p-5 rounded-xl bg-white dark:bg-stone-900 border border-stone-200 dark:border-stone-800 shadow-xs flex flex-col justify-between">
+          <div>
+            <div class="flex items-center gap-1 text-stone-400 mb-2">
+              <i data-lucide="star" class="w-3.5 h-3.5 fill-stone-700 dark:fill-stone-300 text-stone-700 dark:text-stone-300"></i>
+              <i data-lucide="star" class="w-3.5 h-3.5 fill-stone-700 dark:fill-stone-300 text-stone-700 dark:text-stone-300"></i>
+              <i data-lucide="star" class="w-3.5 h-3.5 fill-stone-700 dark:fill-stone-300 text-stone-700 dark:text-stone-300"></i>
+              <i data-lucide="star" class="w-3.5 h-3.5 fill-stone-700 dark:fill-stone-300 text-stone-700 dark:text-stone-300"></i>
+              <i data-lucide="star" class="w-3.5 h-3.5 fill-stone-700 dark:fill-stone-300 text-stone-700 dark:text-stone-300"></i>
+            </div>
+            <p class="text-xs text-stone-600 dark:text-stone-400 leading-relaxed">
+              "아침 식사 대용으로 모둠 영양찰떡 20구 주문해서 냉동실에 두고 먹고 있습니다. 30분 전 꺼내두면 방금 찐 것처럼 말랑하고 달지 않아 속도 무척 편안합니다."
+            </p>
+          </div>
+          <div class="mt-4 pt-3 border-t border-stone-100 dark:border-stone-800 flex items-center justify-between text-[11px] text-stone-400">
+            <span class="font-medium text-stone-800 dark:text-stone-200">이*영 님 (남사읍 한숲시티)</span>
+            <span>영양찰떡 정기주문</span>
+          </div>
+        </div>
+      </div>
+    </div>
+  </section>
+
+  <!-- Location Section: 2-Column Responsive Grid -->
+  <section id="location" class="py-16 bg-stone-50/70 dark:bg-stone-900/40">
+    <div class="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
+      <div class="grid grid-cols-1 lg:grid-cols-12 gap-10 items-center">
+        
+        <!-- Left: Details -->
+        <div class="lg:col-span-6 space-y-5">
+          <span class="inline-flex items-center gap-1.5 px-3 py-1 rounded-full text-xs font-semibold bg-white dark:bg-stone-900 border border-stone-200 dark:border-stone-800 text-stone-700 dark:text-stone-300">
+            <i data-lucide="map-pin" class="w-3.5 h-3.5 text-stone-500"></i> 찾아오시는 길
+          </span>
+          <h2 class="korean-title text-2xl sm:text-3xl font-bold text-stone-900 dark:text-white leading-snug">
+            구수한 쌀 냄새가 머무는<br>
+            <span class="bg-gradient-to-r from-stone-700 to-stone-500 dark:from-stone-200 dark:to-stone-400 bg-clip-text text-transparent">남사떡집으로 오세요</span>
+          </h2>
+          <p class="text-stone-500 dark:text-stone-400 text-xs sm:text-sm leading-relaxed">
+            용인시 처인구 남사읍 중심부에 위치하여 처인구 전역 및 기흥구, 동탄에서도 편안히 오실 수 있습니다. 매장 앞 전용 주차공간이 완비되어 있어 당일 픽업이 수월합니다.
+          </p>
+
+          <div class="space-y-3 pt-1">
+            <div class="flex items-start gap-3 p-3.5 rounded-xl bg-white dark:bg-stone-900 border border-stone-200 dark:border-stone-800 shadow-xs">
+              <div class="w-9 h-9 rounded-lg bg-stone-100 dark:bg-stone-800 text-stone-700 dark:text-stone-300 flex items-center justify-center flex-shrink-0 mt-0.5">
+                <i data-lucide="map-pin" class="w-4 h-4"></i>
+              </div>
+              <div>
+                <p class="text-xs font-semibold text-stone-900 dark:text-stone-100">매장 주소</p>
+                <p class="text-xs text-stone-600 dark:text-stone-300 mt-0.5">경기도 용인시 처인구 남사읍 남사로 88 (남사농협 본점 인근)</p>
+                <p class="text-[11px] text-stone-400 mt-0.5">* 내비게이션에 '남사떡집' 검색 시 바로 안내됩니다.</p>
+              </div>
+            </div>
+
+            <div class="flex items-start gap-3 p-3.5 rounded-xl bg-white dark:bg-stone-900 border border-stone-200 dark:border-stone-800 shadow-xs">
+              <div class="w-9 h-9 rounded-lg bg-stone-100 dark:bg-stone-800 text-stone-700 dark:text-stone-300 flex items-center justify-center flex-shrink-0 mt-0.5">
+                <i data-lucide="clock" class="w-4 h-4"></i>
+              </div>
+              <div>
+                <p class="text-xs font-semibold text-stone-900 dark:text-stone-100">영업 시간</p>
+                <p class="text-xs text-stone-600 dark:text-stone-300 mt-0.5"><strong>월 ~ 토요일:</strong> 06:00 ~ 19:00 (첫 시루 06:30)</p>
+                <p class="text-xs text-stone-500 dark:text-stone-400"><strong>일요일:</strong> 사전 예약 행사 픽업 및 배송 전담</p>
+              </div>
+            </div>
+
+            <div class="flex items-start gap-3 p-3.5 rounded-xl bg-white dark:bg-stone-900 border border-stone-200 dark:border-stone-800 shadow-xs">
+              <div class="w-9 h-9 rounded-lg bg-stone-100 dark:bg-stone-800 text-stone-700 dark:text-stone-300 flex items-center justify-center flex-shrink-0 mt-0.5">
+                <i data-lucide="truck" class="w-4 h-4"></i>
+              </div>
+              <div>
+                <p class="text-xs font-semibold text-stone-900 dark:text-stone-100">배송 안내</p>
+                <p class="text-xs text-stone-600 dark:text-stone-300 mt-0.5">용인·동탄 지역 당일 새벽 보온 퀵 / 전국 안심 익일 택배</p>
+              </div>
+            </div>
+          </div>
+
+          <div class="flex flex-wrap gap-2.5 pt-1">
+            <button onclick="copyAddress()" class="inline-flex items-center gap-1.5 px-4 py-2 rounded-xl bg-gradient-to-r from-stone-900 to-stone-800 dark:from-stone-100 dark:to-stone-200 text-white dark:text-stone-900 text-xs font-semibold hover:brightness-110 transition shadow-sm">
+              <i data-lucide="copy" class="w-3.5 h-3.5"></i> 주소 복사하기
+            </button>
+            <a href="tel:031-332-9080" class="inline-flex items-center gap-1.5 px-4 py-2 rounded-xl bg-white dark:bg-stone-900 border border-stone-300 dark:border-stone-700 text-stone-700 dark:text-stone-200 text-xs font-medium hover:bg-stone-50 dark:hover:bg-stone-800 transition shadow-xs">
+              <i data-lucide="phone" class="w-3.5 h-3.5 text-stone-500"></i> 031-332-9080
+            </a>
+          </div>
+        </div>
+
+        <!-- Right: Styled Minimalist Map Card -->
+        <div class="lg:col-span-6">
+          <div class="bg-white dark:bg-stone-900 p-3.5 sm:p-4 rounded-2xl shadow-md border border-stone-200 dark:border-stone-800 relative overflow-hidden">
+            <div class="relative h-72 sm:h-80 rounded-xl bg-stone-100 dark:bg-stone-800/80 border border-stone-200 dark:border-stone-700 overflow-hidden flex items-center justify-center">
+              <div class="absolute inset-0 opacity-20 bg-[radial-gradient(#736F66_1px,transparent_1px)] [background-size:16px_16px]"></div>
+              
+              <!-- Map lines -->
+              <div class="absolute w-full h-8 bg-white/70 dark:bg-stone-700/60 top-1/2 -translate-y-1/2 -rotate-6"></div>
+              <div class="absolute h-full w-8 bg-white/70 dark:bg-stone-700/60 left-1/2 -translate-x-1/2 rotate-12"></div>
+
+              <!-- Pin Landmark -->
+              <div class="relative z-10 flex flex-col items-center">
+                <div class="px-3.5 py-1.5 rounded-full bg-gradient-to-r from-stone-900 to-stone-800 dark:from-stone-100 dark:to-stone-200 text-white dark:text-stone-900 text-xs font-bold shadow-lg flex items-center gap-1.5">
+                  <i data-lucide="store" class="w-3.5 h-3.5"></i> 남사떡집
+                </div>
+                <div class="w-2.5 h-2.5 bg-stone-900 dark:bg-stone-100 rotate-45 -mt-1"></div>
+              </div>
+
+              <!-- Overlay Bar -->
+              <div class="absolute bottom-3 left-3 right-3 bg-white/95 dark:bg-stone-900/95 backdrop-blur-md p-3 rounded-xl shadow-md border border-stone-200 dark:border-stone-700 flex items-center justify-between">
+                <div>
+                  <p class="text-xs font-semibold text-stone-900 dark:text-stone-100">남사떡집 매장</p>
+                  <p class="text-[10px] text-stone-400">전용 주차 완비 • 매일 오전 6시 오픈</p>
+                </div>
+                <div class="flex items-center gap-1.5">
+                  <button onclick="openMapAlert('네이버 지도')" class="px-2.5 py-1.5 rounded-lg bg-stone-100 hover:bg-stone-200 dark:bg-stone-800 dark:hover:bg-stone-700 text-stone-800 dark:text-stone-200 text-xs font-medium transition border border-stone-200 dark:border-stone-700">
+                    네이버 지도
+                  </button>
+                  <button onclick="openMapAlert('카카오맵')" class="px-2.5 py-1.5 rounded-lg bg-stone-100 hover:bg-stone-200 dark:bg-stone-800 dark:hover:bg-stone-700 text-stone-800 dark:text-stone-200 text-xs font-medium transition border border-stone-200 dark:border-stone-700">
+                    카카오맵
+                  </button>
+                </div>
+              </div>
+            </div>
+          </div>
+        </div>
+
+      </div>
+    </div>
+  </section>
+
+  <!-- Footer -->
+  <footer class="bg-stone-100/60 dark:bg-stone-950 border-t border-stone-200/80 dark:border-stone-800/80 text-stone-600 dark:text-stone-400 pt-12 pb-10">
+    <div class="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
+      <div class="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-12 gap-8 pb-10 border-b border-stone-200 dark:border-stone-800">
+        
+        <!-- Col 1 -->
+        <div class="lg:col-span-5 space-y-3">
+          <div class="flex items-center gap-2.5">
+            <div class="w-8 h-8 rounded-lg bg-white dark:bg-stone-900 border border-stone-300 dark:border-stone-700 flex items-center justify-center">
+              <span class="korean-title font-bold text-stone-900 dark:text-stone-100 text-sm">南舍</span>
+            </div>
+            <span class="text-base font-bold text-stone-900 dark:text-white korean-title">남사떡집</span>
+          </div>
+          <p class="text-xs text-stone-500 dark:text-stone-400 leading-relaxed max-w-sm">
+            용인 백옥쌀의 맑고 정직한 숨결을 한 시루에 올곧게 담아냅니다. 기쁜 날엔 정갈한 축복을, 소중한 순간엔 따스한 온기를 전하겠습니다.
+          </p>
+          <div class="flex items-center gap-2 text-stone-400 dark:text-stone-500 text-[11px] pt-1">
+            <span>용인 백옥쌀 100%</span>
+            <span>•</span>
+            <span>당일 새벽 제조</span>
+            <span>•</span>
+            <span>전국 맞춤 배송</span>
+          </div>
+        </div>
+
+        <!-- Col 2 -->
+        <div class="lg:col-span-3 space-y-2">
+          <p class="text-xs font-semibold text-stone-900 dark:text-stone-200 uppercase tracking-wider">주요 차림표</p>
+          <ul class="space-y-1.5 text-xs text-stone-500 dark:text-stone-400">
+            <li><a href="#menu" class="hover:text-stone-900 dark:hover:text-white transition">답례떡 (돌·백일·결혼)</a></li>
+            <li><a href="#menu" class="hover:text-stone-900 dark:hover:text-white transition">용인 백옥쌀 순백설기</a></li>
+            <li><a href="#menu" class="hover:text-stone-900 dark:hover:text-white transition">모둠 쇠머리 영양찰떡</a></li>
+            <li><a href="#menu" class="hover:text-stone-900 dark:hover:text-white transition">명품 예단·이바지 5합 세트</a></li>
+            <li><a href="#estimate" class="hover:text-stone-900 dark:hover:text-white transition">실시간 간편 견적기</a></li>
+          </ul>
+        </div>
+
+        <!-- Col 3 -->
+        <div class="lg:col-span-4 space-y-2 text-xs text-stone-500 dark:text-stone-400">
+          <p class="text-xs font-semibold text-stone-900 dark:text-stone-200 uppercase tracking-wider">사업자 및 매장 안내</p>
+          <p><strong>상호명:</strong> 남사떡집 | <strong>대표:</strong> 남사떡집 사장</p>
+          <p><strong>사업자등록번호:</strong> 142-81-00000 (용인세무서)</p>
+          <p><strong>소재지:</strong> 경기도 용인시 처인구 남사읍 남사로 88</p>
+          <p><strong>주문전화:</strong> 031-332-9080 (06:00 ~ 19:00)</p>
+        </div>
+
+      </div>
+
+      <!-- Bottom -->
+      <div class="pt-6 flex flex-col sm:flex-row items-center justify-between text-xs text-stone-400 dark:text-stone-500 gap-3">
+        <p>© 2026 남사떡집. All rights reserved.</p>
+        <p class="flex items-center gap-1 text-stone-500 dark:text-stone-400">
+          <i data-lucide="check" class="w-3.5 h-3.5 text-stone-600 dark:text-stone-300"></i> 용인의 정직한 쌀로 빚은 순수한 떡
+        </p>
+      </div>
+    </div>
+  </footer>
+
+  <!-- Custom Toast Box -->
+  <div id="toastMessage" class="fixed bottom-6 right-6 z-50 transform translate-y-32 opacity-0 transition-all duration-300 pointer-events-none">
+    <div class="bg-gradient-to-r from-stone-900 to-stone-800 dark:from-stone-100 dark:to-stone-200 text-white dark:text-stone-900 px-4 py-3.5 rounded-xl shadow-xl border border-stone-700 dark:border-stone-300 flex items-center gap-2.5 max-w-sm">
+      <div id="toastIcon" class="w-7 h-7 rounded-lg bg-white/10 dark:bg-stone-900/10 flex items-center justify-center flex-shrink-0">
+        <i data-lucide="check" class="w-4 h-4"></i>
+      </div>
+      <div>
+        <h4 id="toastTitle" class="text-xs font-bold">알림</h4>
+        <p id="toastBody" class="text-xs text-stone-300 dark:text-stone-700 mt-0.5 leading-relaxed">내용이 표시됩니다.</p>
+      </div>
+    </div>
+  </div>
+
+  <!-- JavaScript: Dark Mode Toggle, Filter & Estimator Logic -->
+  <script>
+    // Initialize Theme and Icons
+    document.addEventListener('DOMContentLoaded', () => {
+      initTheme();
+      lucide.createIcons();
+      calculateTotal();
+    });
+
+    // Theme Management: White Mode & Dark Mode
+    function initTheme() {
+      const savedTheme = localStorage.getItem('theme');
+      const prefersDark = window.matchMedia('(prefers-color-scheme: dark)').matches;
+      
+      if (savedTheme === 'dark' || (!savedTheme && prefersDark)) {
+        document.documentElement.classList.add('dark');
+        updateThemeIcons(true);
+      } else {
+        document.documentElement.classList.remove('dark');
+        updateThemeIcons(false);
+      }
+    }
+
+    function toggleTheme() {
+      const isDark = document.documentElement.classList.toggle('dark');
+      localStorage.setItem('theme', isDark ? 'dark' : 'light');
+      updateThemeIcons(isDark);
+      showToast(isDark ? '다크 모드 (묵향)' : '화이트 모드 (백자)', isDark ? '차분하고 깊이 있는 다크 테마로 전환되었습니다.' : '맑고 깨끗한 화이트 테마로 전환되었습니다.');
+    }
+
+    function updateThemeIcons(isDark) {
+      const lightIcon = document.getElementById('themeIconLight');
+      const darkIcon = document.getElementById('themeIconDark');
+      if (isDark) {
+        lightIcon.classList.remove('hidden');
+        darkIcon.classList.add('hidden');
+      } else {
+        lightIcon.classList.add('hidden');
+        darkIcon.classList.remove('hidden');
+      }
+    }
+
+    // Mobile Navigation Toggle
+    const mobileMenuBtn = document.getElementById('mobileMenuBtn');
+    const mobileMenu = document.getElementById('mobileMenu');
+    mobileMenuBtn.addEventListener('click', () => {
+      mobileMenu.classList.toggle('hidden');
+    });
+
+    document.querySelectorAll('.mobile-nav-link').forEach(link => {
+      link.addEventListener('click', () => {
+        mobileMenu.classList.add('hidden');
+      });
+    });
+
+    // Menu Category Filter Logic with Smooth CSS Grid display
+    function filterMenu(category, e) {
+      const items = document.querySelectorAll('.menu-item');
+      const tabs = document.querySelectorAll('.filter-tab');
+
+      tabs.forEach(tab => {
+        tab.className = "filter-tab px-3.5 py-1.5 rounded-lg text-xs font-medium transition-all bg-white dark:bg-stone-900 text-stone-600 dark:text-stone-400 border border-stone-200 dark:border-stone-800 hover:bg-stone-100 dark:hover:bg-stone-800";
+      });
+      e.currentTarget.className = "filter-tab active-tab px-3.5 py-1.5 rounded-lg text-xs font-medium transition-all bg-stone-900 text-white dark:bg-stone-100 dark:text-stone-900 shadow-sm";
+
+      items.forEach(item => {
+        if (category === 'all' || item.classList.contains(category)) {
+          item.style.display = 'flex';
+          setTimeout(() => { item.style.opacity = '1'; }, 20);
+        } else {
+          item.style.opacity = '0';
+          setTimeout(() => { item.style.display = 'none'; }, 200);
+        }
+      });
+    }
+
+    // Interactive Estimator Calculation
+    function updateQuantity(val) {
+      document.getElementById('qtyDisplay').textContent = `${val} 개/세트`;
+      calculateTotal();
+    }
+
+    function calculateTotal() {
+      const typeSelect = document.getElementById('calcType');
+      const unitPrice = parseInt(typeSelect.value, 10);
+      const selectedOption = typeSelect.options[typeSelect.selectedIndex];
+      const selectedName = selectedOption.getAttribute('data-name') || selectedOption.text;
+      
+      const qty = parseInt(document.getElementById('calcQty').value, 10);
+      const packOption = document.querySelector('input[name="packaging"]:checked');
+      const packPrice = packOption ? parseInt(packOption.value, 10) : 0;
+
+      const baseTotal = unitPrice * qty;
+      const finalTotal = baseTotal + packPrice;
+
+      document.getElementById('summaryMenuName').textContent = selectedName;
+      document.getElementById('summaryQty').textContent = qty;
+      document.getElementById('summaryBasePrice').textContent = baseTotal.toLocaleString() + '원';
+      document.getElementById('summaryPackPrice').textContent = packPrice > 0 ? `+${packPrice.toLocaleString()}원` : '무료';
+      document.getElementById('totalAmount').innerHTML = `${finalTotal.toLocaleString()}<span class="text-xs font-normal text-stone-300 ml-1">원</span>`;
+    }
+
+    function quickOrder(productName, price) {
+      const typeSelect = document.getElementById('calcType');
+      for (let i = 0; i < typeSelect.options.length; i++) {
+        if (typeSelect.options[i].text.includes(productName.substring(0, 8))) {
+          typeSelect.selectedIndex = i;
+          break;
+        }
+      }
+      calculateTotal();
+      document.getElementById('estimate').scrollIntoView({ behavior: 'smooth' });
+      showToast('견적기에 담겼습니다', `[${productName}] 구성이 견적기에 세팅되었습니다.`);
+    }
+
+    function showToast(title, message) {
+      const toast = document.getElementById('toastMessage');
+      const toastTitle = document.getElementById('toastTitle');
+      const toastBody = document.getElementById('toastBody');
+
+      toastTitle.textContent = title;
+      toastBody.textContent = message;
+
+      toast.classList.remove('translate-y-32', 'opacity-0', 'pointer-events-none');
+      toast.classList.add('translate-y-0', 'opacity-100');
+
+      setTimeout(() => {
+        toast.classList.remove('translate-y-0', 'opacity-100');
+        toast.classList.add('translate-y-32', 'opacity-0', 'pointer-events-none');
+      }, 3000);
+    }
+
+    function copyAddress() {
+      const addressText = "경기도 용인시 처인구 남사읍 남사로 88 남사떡집";
+      const dummyInput = document.createElement("input");
+      document.body.appendChild(dummyInput);
+      dummyInput.value = addressText;
+      dummyInput.select();
+      try {
+        document.execCommand('copy');
+        showToast('주소 복사 완료', '남사떡집 매장 주소가 복사되었습니다.');
+      } catch (err) {
+        showToast('주소 복사 안내', addressText);
+      }
+      document.body.removeChild(dummyInput);
+    }
+
+    function openMapAlert(platform) {
+      showToast(`${platform} 연결`, `${platform}으로 남사떡집 경로를 탐색합니다.`);
+    }
+
+    function submitInquiry() {
+      const name = document.getElementById('userName').value.trim();
+      const phone = document.getElementById('userPhone').value.trim();
+
+      if (!name || !phone) {
+        showToast('입력 확인 필요', '성함과 연락처를 입력해 주시면 신속히 안내드리겠습니다.');
+        document.getElementById('userName').focus();
+        return;
+      }
+
+      showToast('상담 예약 완료', `${name} 고객님(${phone}), 남사떡집에서 확인 후 곧 연락드리겠습니다.`);
+      document.getElementById('userName').value = '';
+      document.getElementById('userPhone').value = '';
+    }
+  </script>
+</body>
+</html>
